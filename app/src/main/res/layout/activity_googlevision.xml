@@ -12,44 +12,43 @@
         android:layout_height="200dp"
         android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/numberplate" />
 
     <TextView
         android:id="@+id/tv_image_source"
-        android:layout_width="226dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="68dp"
-        android:text="TextView"
+        android:layout_width="202dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="64dp"
+        android:text="Vehicle Number"
+        android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/img_source"
+        app:layout_constraintStart_toStartOf="@+id/img_source"
         app:layout_constraintTop_toBottomOf="@+id/img_source" />
 
     <Button
         android:id="@+id/btn_get_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/background_drop_btn"
         android:text="getText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_image_source"
+        app:layout_constraintStart_toStartOf="@+id/tv_image_source"
         app:layout_constraintTop_toBottomOf="@+id/tv_image_source" />
 
     <Button
         android:id="@+id/btn_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/background_btn"
         android:text="send to next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_get_text"
+        app:layout_constraintStart_toStartOf="@+id/btn_get_text"
         app:layout_constraintTop_toBottomOf="@+id/btn_get_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private Context mContext;
-    TextView mManualTextView;
-    ImageView mImageView;
+
+    ImageView captureImg, manualImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,22 +23,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Log.d(TAG, "onCreate: started ....");
-
         mContext = MainActivity.this;
 
-        mManualTextView = findViewById(R.id.tv_manual);
-        mImageView = findViewById(R.id.img_capture);
+        captureImg = findViewById(R.id.img_capture);
+        manualImg = findViewById(R.id.img_manual);
 
-        mImageView.setImageResource(R.drawable.profile_person);
-        mImageView.setOnClickListener(new View.OnClickListener() {
+        captureImg.animate().translationY(100).setDuration(1000).setStartDelay(300);
+        manualImg.animate().translationY(-100).setDuration(1000).setStartDelay(300);
+
+        captureImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(mContext, CaptureCamera.class));
             }
         });
 
-
-        mManualTextView.setOnClickListener(new View.OnClickListener() {
+        manualImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(mContext, ManualActivity.class));

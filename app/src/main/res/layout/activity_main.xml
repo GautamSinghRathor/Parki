@@ -11,18 +11,18 @@
         android:id="@+id/img_capture"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/capture_camera"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@mipmap/ic_launcher" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_random"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="92dp"
         android:text="OR"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,18 +30,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_capture" />
 
-    <TextView
-        android:id="@+id/tv_manual"
-        android:layout_width="132dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="40dp"
-        android:text="MANUAL"
-        android:textAlignment="center"
-        android:textSize="23sp"
+    <ImageView
+        android:id="@+id/img_manual"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/manual_edit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_random" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="307dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="104dp"
+        android:text="Welcom to Parki. "
+        android:textAlignment="center"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_manual" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

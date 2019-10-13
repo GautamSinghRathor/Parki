@@ -37,6 +37,8 @@ public class Googlevision extends AppCompatActivity {
         btnSendToNext = findViewById(R.id.btn_next);
 
 
+        btnSendToNext.animate().translationY(-200).setDuration(1000).setStartDelay(300);
+
         if(getIntent().hasExtra("byteArray")) {
             ImageView previewThumbnail = new ImageView(this);
             Bitmap b = BitmapFactory.decodeByteArray(

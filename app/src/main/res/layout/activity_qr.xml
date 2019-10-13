@@ -38,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:text="save"
+                android:background="@drawable/background_drop_btn"
                 android:layout_gravity="center_horizontal"/>
         </LinearLayout>
 
@@ -49,5 +50,19 @@
             android:text="webview" />-->
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="304dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="72dp"
+        android:text="Thanks for using our application :)"
+        android:textSize="18sp" />
 
 </RelativeLayout>

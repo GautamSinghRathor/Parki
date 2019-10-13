@@ -23,7 +23,7 @@ import java.io.OutputStream;
 public class CaptureCamera extends AppCompatActivity {
     private static final String TAG = "CaptureCamera";
 
-    ImageView imageView, im;
+    ImageView imageView;
     Button button, btnNext;
     Bitmap bp;
     @Override
@@ -34,10 +34,13 @@ public class CaptureCamera extends AppCompatActivity {
         Log.d(TAG, "onCreate: started....");
 
         imageView = findViewById(R.id.img_capture);
-        im = findViewById(R.id.dummyImage);
 
         button = findViewById(R.id.btn_capture);
         btnNext = findViewById(R.id.btn_next);
+
+        //Animation Section
+        button.animate().translationX(200).setDuration(1000).setStartDelay(300);
+        btnNext.animate().translationY(-200).setDuration(1000).setStartDelay(300);
 
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -52,15 +55,6 @@ public class CaptureCamera extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(CaptureCamera.this, Googlevision.class));
-
-                im.setImageBitmap(bp);
-
-                Intent i = new Intent(CaptureCamera.this, Googlevision.class);
-                Bitmap b = null; // your bitmap
-                ByteArrayOutputStream bs = new ByteArrayOutputStream();
-                b.compress(Bitmap.CompressFormat.PNG, 50, bs);
-                i.putExtra("byteArray", bs.toByteArray());
-                startActivity(i);
             }
         });
 

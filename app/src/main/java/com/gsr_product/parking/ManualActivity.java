@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -25,6 +26,7 @@ public class ManualActivity extends AppCompatActivity {
     Button btn_capture, btn_submit;
     TextView tvTime;
     Date currentTime;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,10 @@ public class ManualActivity extends AppCompatActivity {
         btn_capture = findViewById(R.id.btn_capture);
         btn_submit = findViewById(R.id.btn_submit);
         tvTime = findViewById(R.id.tv_time);
+        imageView = findViewById(R.id.imageView);
+
+        imageView.animate().translationX(30).setDuration(1000).setStartDelay(300);
+
 
 
         currentTime = Calendar.getInstance().getTime();
